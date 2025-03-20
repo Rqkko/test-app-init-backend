@@ -6,11 +6,12 @@ app = FastAPI()
 
 SUPABASE_URL = os.getenv("SUPABASE_URL")
 SUPABASE_KEY = os.getenv("SUPABASE_KEY")
+print(SUPABASE_KEY)
 supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 
 @app.get("/")
 def read_root():
-    return {"message": "FastAPI Backend with Supabase"}
+    return {"message": "FastAPI Backend with Supabase " + SUPABASE_URL}
 
 @app.get("/users")
 def get_users():
