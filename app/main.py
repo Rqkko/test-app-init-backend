@@ -13,7 +13,7 @@ supabase: Client = create_client(SUPABASE_URL, SUPABASE_KEY)
 # Add CORS middleware
 origins = [
     "http://localhost:3000",  # React development server
-    "https://test-app-init-frontend-production.up.railway.app/",  # Your deployed frontend URL
+    "https://test-app-init-frontend-production.up.railway.app",  # Your deployed frontend URL
 ]
 
 app.add_middleware(
