@@ -32,3 +32,7 @@ def read_root():
 def get_users():
     response = supabase.table("users").select("*").execute()
     return response
+
+@app.get("/getVar")
+def get_var():
+    return {os.getenv("REACT_APP_API_URL")}
